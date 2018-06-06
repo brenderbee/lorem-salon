@@ -1,0 +1,124 @@
+$font-header: "Playfair Display", serif;
+$font-body: "Raleway", sans-serif;
+$light-grey: #E9E9E9;
+$gold: #F0C71C;
+$navy: #1F4DAB;
+$dark-green: #3C4C4D;
+$dark-grey: #5A5A5C;
+$black-grey: #393939;
+$wine-red: #5E2626;
+
+
+.promotions {
+  background-color: $navy;
+  font-size: 0.875rem;
+  color: $light-grey;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+  
+.navbar {
+  background-color: $light-grey;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.42);
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  
+  .left-logo {
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: flex-start;
+    align-items: baseline;
+    width: 50%;
+    
+    h1 {
+      margin: 0;
+    }
+    
+    p {
+      font-size: 0.875rem;
+      padding: 0 20px;
+    }
+  }
+  
+  .right-nav {
+    display: flex;
+    font-size: 0.875rem;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    
+    p:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+.container {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.42);
+  margin: 0 auto; 
+  max-width: 1000px;
+}
+
+.banner {
+  position: relative;
+  
+  .call-to-action {
+    position: absolute;
+    top: 4.375rem;
+    left: 4.375rem;
+    width: 320px;
+    
+    p {
+      margin-bottom: 1.6rem;
+      line-height: 1.6rem;
+    }
+    
+    button {
+      width: 63%;
+      font-size: 1rem;
+    }
+  }
+  
+  .image {
+    background-image: url(/assets/img/banner.jpg);
+    background-size: cover;
+    background-position: top right;
+    height: 525px;
+    overflow: hidden;
+  }
+
+}
+
+.about {
+  background-color: $dark-green;
+  color: $light-grey;
+  
+  .content {
+    height: auto;
+    margin: 0 auto;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    width: 62%;
+    text-align: center;
+  }
+  
+  h2 {
+    text-transform: uppercase;
+  }
+  
+  p {
+    line-height: 1.6rem;
+  }
+}
+
