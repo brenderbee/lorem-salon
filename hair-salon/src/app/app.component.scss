@@ -199,3 +199,48 @@
     }
   }
 }
+
+.contact {
+  .content {
+    @include content;
+    margin-left: 2.5em;
+    margin-right: 2.5rem;
+
+    h2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+    }
+  }
+
+  .contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+      width: 50%;
+
+      .hours-wrapper {
+        display: flex;
+      }
+    }
+
+    .right {
+      width: 50%;
+
+      input {
+        height: 2.75rem;
+        width: 100%;
+        margin-bottom: 1.25rem;
+      }
+    }
+  }
+
+  .cancellation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
