@@ -1,19 +1,5 @@
-$font-header: "Playfair Display", serif;
-$font-body: "Raleway", sans-serif;
-$light-grey: #E9E9E9;
-$gold: #F0C71C;
-$navy: #1F4DAB;
-$dark-green: #3C4C4D;
-$dark-grey: #5A5A5C;
-$black-grey: #393939;
-$wine-red: #5E2626;
-
-@mixin content {
-  height: auto;
-  margin: 0 auto;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
+@import "./../_mixins";
+@import "./../_variables";
 
 .promotions {
   background-color: $navy;
@@ -25,7 +11,7 @@ $wine-red: #5E2626;
   align-items: center;
   z-index: 1000;
 }
-  
+
 .navbar {
   background-color: $light-grey;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.42);
@@ -37,31 +23,31 @@ $wine-red: #5E2626;
   position: sticky;
   top: 0;
   z-index: 500;
-  
+
   .left-logo {
     display: flex;
     font-size: 1.5rem;
     justify-content: flex-start;
     align-items: baseline;
     width: 50%;
-    
+
     h1 {
       margin: 0;
     }
-    
+
     p {
       font-size: 0.875rem;
       padding: 0 20px;
     }
   }
-  
+
   .right-nav {
     display: flex;
     font-size: 0.875rem;
     justify-content: space-around;
     align-items: center;
     width: 50%;
-    
+
     p:hover {
       cursor: pointer;
       text-decoration: underline;
@@ -73,30 +59,30 @@ $wine-red: #5E2626;
 .container {
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.42);
   margin-left: auto;
-  margin-right: auto; 
+  margin-right: auto;
   margin-bottom: 3rem;
   max-width: 1000px;
 }
 
 .banner {
   position: relative;
-  
+
   .call-to-action {
     position: absolute;
     top: 8%;
     left: 8%;
     width: 320px;
-    
+
     p {
       margin-bottom: 1.6rem;
       line-height: 1.6rem;
     }
-    
+
     button {
       width: 63%;
     }
   }
-  
+
   .image {
     background-image: url(/assets/img/banner.jpg);
     background-size: cover;
@@ -110,17 +96,17 @@ $wine-red: #5E2626;
 .about {
   background-color: $dark-green;
   color: $light-grey;
-  
+
   .content {
     @include content;
     width: 62%;
     text-align: center;
   }
-  
+
   h2 {
     text-transform: uppercase;
   }
-  
+
   p {
     line-height: 1.6rem;
   }
@@ -128,28 +114,88 @@ $wine-red: #5E2626;
 
 .services-section {
   background-color: $light-grey;
-  
+
   .content {
     @include content;
   }
-  
+
   h2 {
     display: flex;
     justify-content: center;
     text-transform: uppercase;
   }
-  
+
   .list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     margin: 0 20px 1.6rem 20px;
   }
-  
+
   button {
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
   }
-  
+
+}
+
+.service {
+  h3 {
+    margin-left: 20px;
+  }
+
+  p {
+    margin-left: 20px;
+  }
+}
+
+.service-image {
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 1.6rem;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+
+  h3 {
+    margin-left: 20px;
+  }
+
+  p {
+    margin-left: 20px;
+  }
+}
+
+.gallery {
+  background-color: $wine-red;
+  color: $light-grey;
+  text-transform: uppercase;
+
+  .content {
+    @include content;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
